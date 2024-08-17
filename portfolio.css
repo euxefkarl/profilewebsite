@@ -1,61 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin 0;
+  padding 0;
+  box-sizing: border-box;
+  font-family:"Poppins", sans-serif;
+
+}
+
+
 body{
-    background-image: linear-gradient(rgb(227, 167, 0),rgb(212, 206, 34), rgb(246, 255, 0));
+    background:rgb(223, 171, 2);
+    color: antiquewhite;
+
 }
 
-html{
-    font-family: sans-serif;
+
+header{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background:transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo{
+  font-size: 25px;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar a{
+  font-size: 18px;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: 0.3s;
+}
+.navbar a:hover,.navbar a.active{
+  color: rgb(0, 0, 0);
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #FFFF00;
-    color: rgb(0, 0, 0);
-  }
-  h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70;
-    padding: 20px;
-    text-align: center;
-
-  }
-  
   .image{
     width:540px; /* you can use % */
     height: auto;
   }
 
-  .home{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 25%;
-    width: 100;
-  }
-  .homedesc{
-    padding-left: 20px;
-    text-align: left;
-    font-weight:bold;
-    font-size:55px;
-  }
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.home-content{
+  max-width: 600px;
+  margin: 20px 40px;
+}
+.home-content h1{
+  font-size: 45px;
+  font-weight: 700;
+  color: rgb(10, 0, 126);
+}
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.home-content p{
+  font-size: 25px;
+  font-weight: 600;
+}
+.home-content .buttonbox{
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+.buttonbox a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: rgb(21, 142, 255);
+  border:2px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  font-size: 19px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  
+
+}
+.buttonbox a:hover{
+  color: rgb(0, 0, 0);
+}
+.buttonbox a:nth-child(2){
+  background: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+}
+.buttonbox a:nth-child(2):hover{
+  color: rgb(0, 0, 0);
+
+}
+.buttonbox a:nth-child(2)::before{
+  background: rgb(167, 1, 208);
+}
+
+.buttonbox a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(167, 1, 208);
+  transition: 0.5s;
+  z-index: -1;
+}
+.buttonbox a:hover::before{
+  width: 100%;
+}
+.homelink{
+  position: absolute;
+  bottom: 40px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+.homelink a{
+  position: relative;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.homelink a:hover{
+  color: rgb(0, 0, 0);
+}
+.homelink a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(246, 255, 0);
+  z-index: -1;
+  transition: 0.5s;
+}
+.homelink a:hover::before{
+  width: 100%;
+}
